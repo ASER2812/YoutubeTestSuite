@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88ededf4-34f4-46c1-926f-b84ad80e08cd" name="Changes" comment="initial">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/RunSuite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/LoginUT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/MainPageUT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/run_Suite.java" afterDir="false" />
+    <list default="true" id="88ededf4-34f4-46c1-926f-b84ad80e08cd" name="Changes" comment="initial with Project Setup">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/PanelUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/ShortsUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/VideoPageUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/VideoPlaybackUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/VideoPlayerUT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/sidebarMenuUT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/LoginUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/LoginUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/MainPageUT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/MainPageUT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/run_Suite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/youtubetestsuite/TestSuiteRun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +56,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.MainPageUT">
+  <component name="RunManager" selected="TestNG.MainPageUT.voiceSearchTest">
     <configuration name="MainPageUT" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="YoutubeTestSuite" />
       <extension name="coverage">
@@ -65,24 +68,6 @@
       <option name="PACKAGE_NAME" value="com.example.youtubetestsuite" />
       <option name="MAIN_CLASS_NAME" value="com.example.youtubetestsuite.MainPageUT" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainPageUT.YTLogoTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="YoutubeTestSuite" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.youtubetestsuite.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.youtubetestsuite" />
-      <option name="MAIN_CLASS_NAME" value="com.example.youtubetestsuite.MainPageUT" />
-      <option name="METHOD_NAME" value="YTLogoTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -143,21 +128,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainPageUT.voiceSearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="YoutubeTestSuite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.youtubetestsuite.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.youtubetestsuite" />
+      <option name="MAIN_CLASS_NAME" value="com.example.youtubetestsuite.MainPageUT" />
+      <option name="METHOD_NAME" value="voiceSearchTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="TestNG.RunSuite" />
       <item itemvalue="TestNG.MainPageUT" />
-      <item itemvalue="TestNG.MainPageUT.YTLogoTest" />
       <item itemvalue="TestNG.MainPageUT.ZSeachBarTest" />
       <item itemvalue="TestNG.MainPageUT.seachBarTest" />
       <item itemvalue="TestNG.MainPageUT.sidebarMenuTest" />
+      <item itemvalue="TestNG.MainPageUT.voiceSearchTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MainPageUT.voiceSearchTest" />
         <item itemvalue="TestNG.MainPageUT" />
         <item itemvalue="TestNG.MainPageUT.sidebarMenuTest" />
         <item itemvalue="TestNG.MainPageUT.seachBarTest" />
         <item itemvalue="TestNG.MainPageUT.ZSeachBarTest" />
-        <item itemvalue="TestNG.MainPageUT.YTLogoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713279571013</updated>
-      <workItem from="1713279572100" duration="7198000" />
+      <workItem from="1713279572100" duration="9988000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -179,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713281848831</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial with Project Setup">
+      <option name="closed" value="true" />
+      <created>1713301463250</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713301463250</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +209,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="initial with Project Setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial with Project Setup" />
   </component>
 </project>

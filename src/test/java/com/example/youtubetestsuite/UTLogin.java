@@ -3,7 +3,7 @@ package com.example.youtubetestsuite;
 
 import org.testng.annotations.*;
 
-public class LoginUT extends run_Suite {
+public class LoginUT extends TestSuiteRun {
     @Test
     public void run(){
         System.out.println("hi Login1");
