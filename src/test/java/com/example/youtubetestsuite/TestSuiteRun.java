@@ -12,6 +12,7 @@ import java.time.Duration;
 public class TestSuiteRun {
 
     protected WebDriver driver;
+    protected ChromeOptions options;
     String ChromeDriverPath =
             "C:\\Users\\Laser\\Desktop\\ChromeDriver\\chromedriver.exe";//must change to local path of driver
 
@@ -38,8 +39,16 @@ public class TestSuiteRun {
         driver.quit();
         //System.out.println("After Test");
     }
-    @BeforeGroups (groups = "reset")
+    @BeforeMethod (groups = "reset")
     public void resetToHP(){
         driver.get("https://www.youtube.com/");
+    }
+
+    @BeforeMethod(groups = "VP")
+    protected void setVP() throws InterruptedException {
+        driver.get("https://www.youtube.com/");
+        Thread.sleep(1000);
+        driver.get("https://www.youtube.com/watch?v=lepYkDZ62OY");
+        Thread.sleep(2000);
     }
 }
