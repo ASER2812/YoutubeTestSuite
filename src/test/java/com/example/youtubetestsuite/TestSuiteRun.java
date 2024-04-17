@@ -9,7 +9,7 @@ import java.time.Duration;
 
 
 @Test
-public class run_Suite {
+public class TestSuiteRun {
 
     protected WebDriver driver;
     String ChromeDriverPath =
@@ -21,6 +21,7 @@ public class run_Suite {
         ChromeOptions options = new ChromeOptions();
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
         options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--use-fake-ui-for-media-stream");
         System.setProperty("webdriver.chrome.driver", ChromeDriverPath);
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -32,7 +33,8 @@ public class run_Suite {
     }
 
     @AfterClass
-    public void AfterUnitTest() {
+    public void AfterUnitTest() throws InterruptedException {
+        Thread.sleep(3000);
         driver.quit();
         //System.out.println("After Test");
     }

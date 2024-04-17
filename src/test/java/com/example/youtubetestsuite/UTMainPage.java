@@ -6,9 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
-public class MainPageUT extends run_Suite {
+public class UTMainPage extends TestSuiteRun {
 
     @Test (priority = 0)
     public void searchBarTest() throws InterruptedException {
@@ -28,7 +26,20 @@ public class MainPageUT extends run_Suite {
         Thread.sleep(1000);
         System.out.println("SearchTest passed");
     }
-    @Test (priority = 1)
+    @Test(priority = 1, groups = "reset")
+    public void voiceSearchTest() throws InterruptedException {
+        WebElement voiceSearchButton = driver.findElement(By.id("voice-search-button"));
+        voiceSearchButton.click();
+        Thread.sleep(2000);
+
+        WebElement closeButton = driver.findElement(By.id("exit-button"));
+        Assert.assertTrue(closeButton.isDisplayed(), "Voice search Close button not on page!");
+        closeButton.click();
+
+        Thread.sleep(2000);
+        System.out.println("voiceSearchTest Passed");
+    }
+    @Test (priority = 2)
     public void YTLogoTest() throws InterruptedException {
 
         WebElement logo = driver.findElement(By.id("logo-icon"));
@@ -42,19 +53,6 @@ public class MainPageUT extends run_Suite {
         System.out.println("YTLogoTest passed");
     }
 
-    @Test(priority = 2, groups = "reset")
-    public void sidebarMenuTest() throws InterruptedException {
-        WebElement menuButton = driver.findElement(By.id("guide-button"));
-        menuButton.click();
-        Thread.sleep(2000);
 
-        WebElement youPagebutton = driver.findElement(By.linkText("You"));
-        youPagebutton.click();
-        Thread.sleep(3000);
 
-        String expectedTitle = "https://www.youtube.com/feed/you";
-        Assert.assertEquals(driver.getCurrentUrl(), expectedTitle, "URL does not match HomePage expectation");
-
-        System.out.println("sidebarMenuTest Passed");
-    }
 }
