@@ -13,7 +13,10 @@
     <option name="OUTPUT_DIRECTORY" value="" />
     <option name="PROPERTIES_FILE" value="" />
     <properties />
-    <listeners />
+    <listeners>
+      <listener class="org.testng.reporters.EmailableReporter" />
+      <listener class="org.testng.reporters.FailedReporter" />
+    </listeners>
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

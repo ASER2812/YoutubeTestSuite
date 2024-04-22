@@ -13,6 +13,8 @@ public class TestSuiteRun {
 
     protected WebDriver driver;
     protected ChromeOptions options;
+    private int testCount = 0;
+
     String ChromeDriverPath =
             "C:\\Users\\Laser\\Desktop\\ChromeDriver\\chromedriver.exe";//must change to local path of driver
 
@@ -29,6 +31,7 @@ public class TestSuiteRun {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.youtube.com/");
         Thread.sleep(1000);
+        System.out.println("Unit Test: " + testCount + " Started");
 
         //System.out.println("Before Test");
     }
@@ -37,18 +40,11 @@ public class TestSuiteRun {
     public void AfterUnitTest() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();
-        //System.out.println("After Test");
-    }
-    @BeforeMethod (groups = "reset")
-    public void resetToHP(){
-        driver.get("https://www.youtube.com/");
+        testCount++;
+        System.out.println("Unit Test: " + testCount + " Completed");
     }
 
-    @BeforeMethod(groups = "VP")
-    protected void setVP() throws InterruptedException {
-        driver.get("https://www.youtube.com/");
-        Thread.sleep(1000);
-        driver.get("https://www.youtube.com/watch?v=lepYkDZ62OY");
-        Thread.sleep(2000);
-    }
+
+
+
 }

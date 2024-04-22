@@ -4,9 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class UTVideoPlayerSettings extends TestSuiteRun{
+
+    @BeforeMethod(groups = "VP")
+    private void setVP() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.get("https://www.youtube.com/watch?v=lepYkDZ62OY");
+        Thread.sleep(2000);
+    }
+
 
     @Test(priority = 0, groups = "VP")
     public void settingsButtonTest() throws InterruptedException {

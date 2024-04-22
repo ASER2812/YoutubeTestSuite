@@ -4,9 +4,14 @@ package com.example.youtubetestsuite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class UTMainPage extends TestSuiteRun {
+    @BeforeMethod(groups = "reset")
+    private void resetToHP(){
+        driver.get("https://www.youtube.com/");
+    }
 
     @Test (priority = 0)
     public void searchBarTest() throws InterruptedException {

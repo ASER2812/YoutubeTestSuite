@@ -10,11 +10,20 @@ import org.testng.annotations.*;
 import java.time.Duration;
 
 public class UTVideoPlayer extends TestSuiteRun{
+    @BeforeMethod(groups = "VP")
+    private void setVP() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.get("https://www.youtube.com/watch?v=lepYkDZ62OY");
+        Thread.sleep(2000);
+    }
+
 
     @Test(priority = 0, groups = "VP")
     public void pauseButtonTest() throws InterruptedException {
-        WebElement pauseButton = driver.findElement(By.cssSelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > button"));
-        pauseButton.click();
+        new Actions(driver)
+                .sendKeys("k")
+                .perform();
+
         Thread.sleep(1000);
 
         Assert.assertTrue(driver.findElement(By.id("movie_player")).isDisplayed(), "Video is not in FullScreen" );
@@ -24,11 +33,18 @@ public class UTVideoPlayer extends TestSuiteRun{
     }
     @Test(priority = 1, groups = "VP")
     public void playButtonTest() throws InterruptedException {
-        WebElement pauseButton = driver.findElement(By.cssSelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > button"));
-        pauseButton.click();
+        new Actions(driver)
+                .sendKeys("k")
+                .perform();
+
+        Thread.sleep(2000);
+        new Actions(driver)
+                .sendKeys("k")
+                .perform();
+
         Thread.sleep(1000);
 
-        WebElement playButton = pauseButton;
+        WebElement playButton = driver.findElement(By.cssSelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > button"));
         playButton.click();
         Thread.sleep(1000);
 
